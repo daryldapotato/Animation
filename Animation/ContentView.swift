@@ -27,9 +27,10 @@ struct ContentView: View {
             .trim(from: lineLength * 2 - 1 , to: lineLength)
             .stroke(.blue, lineWidth: 3)
             .task {
-                lineLength = 1
+                withAnimation(Animation.easeInOut(duration: 60)){
+                    lineLength = 1
+                }
             }
-            .animation(Animation.easeInOut(duration: 60))
         }
         else{
             Button{
