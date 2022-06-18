@@ -15,7 +15,7 @@ struct ContentView: View {
         if(started){
             Path { path in
                 path.move(to: CGPoint(x: 0, y: 0))
-                for _ in 1 ... 750 {
+                for _ in 1 ... 1500 {
                     let x = Int.random(in: 0...400)
                     let y = Int.random(in: 0...750)
                     withAnimation{
@@ -29,7 +29,7 @@ struct ContentView: View {
             .task {
                 lineLength = 1
             }
-            .animation(Animation.easeInOut(duration: 30))
+            .animation(Animation.easeInOut(duration: 60))
         }
         else{
             Button{
